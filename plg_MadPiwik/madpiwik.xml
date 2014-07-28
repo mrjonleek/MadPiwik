@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<install version="1.7" type="plugin" group="system">
+	<name>System - Piwik Anlaytics</name>
+	<author>Jonathan Leek</author>
+	<creationDate>August 2012</creationDate>
+	<copyright>Copyright (C) 2012 Jonathan Leek. All rights reserved.</copyright>
+	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
+	<authorEmail>builder@dev.jonathanleek.com</authorEmail>
+	<authorUrl>http://www.jonathanleek.com</authorUrl>
+	<version>1.0.0</version>
+	<description>This plugin will place the Piwik tracking code in your website. You will need to enable and configure the plugin after installation.</description>
+	<files>
+		<filename plugin="madpiwik">madpiwik.php</filename>
+	</files>
+	<params>
+		<param name="credit" type="radio" default="1" label="Show Credit? (Thanks!)" description="Please leave this enabled :)" >
+			<option value="1">Yes</option>
+			<option value="0">No</option>	
+		</param>
+		<param name="path" type="text" default="" label="Piwik Path" description="This is the full URL to your Piwik installation excluding the protocol. (ex: www.your_piwik_instance.com/path/)." />
+		<param name="site_id" type="text" default="" label="Piwik Site ID" description="The Piwik ID for this website." />
+	</params>
+	<config>
+		<fields name="params">
+			<fieldset name="basic">
+				<field name="credit" type="radio" default="1" label="Show Credit? (Thanks!)" description="Please leave this enabled :)" >
+					<option value="1">Yes</option>
+					<option value="0">No</option>	
+				</field>
+				<field name="path" type="text" default="" label="Piwik Path" description="This is the full URL to your Piwik installation. (ex: http://www.your_piwik_instance.com/path/)." />
+				<field name="site_id" type="text" default="" label="Piwik Site ID" description="The Piwik ID for this website." />
+			</fieldset>
+		</fields>
+	</config>	
+</install>
+
